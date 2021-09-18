@@ -1,4 +1,4 @@
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -111,6 +111,32 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+} */
+
+.sect__2 {
+  background-color: #f5f5f5;
+  padding: 15vh 0;
+}
+
+.adv__stats__cont {
+  padding: 8vh 0;
+  margin: 5vw;
+}
+
+.adv__track {
+  font-size: 15px;
+  color: hsl(0, 0%, 75%);
+  padding: 3px 0;
+}
+
+.brand__recog__cont {
+  margin: 4vh 5vw 0 5vw;
+}
+
+.footer__shortly {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 20px 15px 0;
 }
 
 @media (max-width: 600px) {

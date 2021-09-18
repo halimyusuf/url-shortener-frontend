@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 html,
 body {
   padding: 0;
@@ -13,4 +14,260 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --main-primary-color: hsl(180, 66%, 49%);
+  --white: #fff;
+  --grey: hsl(0, 0%, 75%);
+  --dark-grey: #616161;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3vw 5vh;
+}
+
+.navbar ul li {
+  display: inline;
+  list-style: none;
+  padding: 3px 5px;
+  font-size: 13px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background-color: var(--main-primary-color);
+  color: white;
+}
+
+.active {
+  background-color: var(--main-primary-color);
+  color: var(--white);
+}
+
+#nav-brand {
+  font-size: large;
+  font-weight: 600;
+  background-color: var(--white);
+}
+
+.page-intro {
+  margin: 10vh 4vw 15vh 4vw;
+  display: flex;
+}
+
+.page-intro div {
+  flex-grow: 1;
+}
+
+.page-intro .title {
+  /* font-size: 5vw; */
+  font-weight: 700;
+}
+
+.page-intro img {
+  margin: 20px 0;
+}
+
+.md-btn-primary {
+  background-color: var(--main-primary-color);
+  /* display: inline; */
+  width: fit-content;
+  color: var(--white);
+  padding: 0px 22px;
+  border-radius: 18px;
+  padding: 8px 22px;
+  text-align: center;
+  margin: auto 0;
+}
+
+.intro-action {
+  margin: 15px 0;
+}
+
+.muted-desc {
+  font-size: 18px;
+  color: var(--grey);
+  margin: 10px 0;
+}
+
+.md-btn-primary:hover {
+  cursor: pointer;
+}
+
+.btn-shorten {
+  background-color: var(--main-primary-color);
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  height: 45px;
+  border-radius: 4px;
+}
+
+.url-form-sect-cont {
+  margin: 10vh 5vw 0;
+  position: relative;
+  /* top: 100; */
+}
+
+.url-form-sect-1 {
+  padding: 4vh 7vw;
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  /* background-color: hsl(257, 27%, 26%); */
+  background-color: hsl(260, 8%, 14%);
+  background: url("/images/bg-shorten-desktop.svg");
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.url-form-sect {
+  display: flex;
+}
+
+.url-form-sect div {
+  flex-grow: 0.3;
+}
+
+.url-form-sect div:first-child {
+  flex-grow: 1;
+}
+
+.url-form-sect input {
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.link-boost-sect {
+  padding: 10vh 0;
+  color: white;
+  width: 100vw;
+  background: url("/images/bg-boost-desktop.svg");
+}
+
+.footer-col {
+  padding: 0 18px;
+  margin-bottom: 20px;
+}
+
+.footer-sub-head {
+  padding-bottom: 10px;
+}
+
+.footer-item {
+  color: var(--grey);
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.footer {
+  padding: 10vh;
+  color: white;
+  background-color: hsl(260, 8%, 14%);
+}
+
+.card-item {
+  background-color: white;
+  width: fit-content;
+  /* align-self: center; */
+  padding: 25px;
+  text-align: justify;
+  border-radius: 4px;
+  margin-top: 25px;
+}
+
+.card-item-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.card-item-desc {
+  color: var(--dark-grey);
+}
+
+.card-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.footer-col img {
+  padding: 4px 3px;
+}
+
+.sect__2 {
+  background-color: #f5f5f5;
+  padding: 15vh 0;
+}
+
+.adv__stats__cont {
+  padding: 8vh 0;
+  margin: 5vw;
+}
+
+.adv__track {
+  font-size: 15px;
+  color: hsl(0, 0%, 75%);
+  padding: 3px 0;
+}
+
+.brand__recog__cont {
+  margin: 4vh 5vw 0 5vw;
+}
+
+.footer__shortly {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 20px 15px 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .url-form-sect-1 {
+    background: url("/images/bg-shorten-mobile.svg");
+  }
+
+  .link-boost-sect1 {
+    background: url("/images/bg-boost-mobile.svg");
+  }
+
+  .page-intro {
+    flex-direction: column-reverse;
+  }
 }
