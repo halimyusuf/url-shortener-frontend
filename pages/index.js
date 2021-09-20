@@ -1,8 +1,50 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
+import LinksList from "../components/LinksList";
 import styles from "../styles/Home.module.css";
+import axios from "axios";
+
+// https://api.shrtco.de/v2/shorten?url=https://www.frontendmentor.com
 
 export default function Home() {
+  const [links, setLinks] = useState([
+    {
+      id: 1,
+      link: "https://www.frontendmentor.com",
+      shortCode: "https://shrtco.de/rcQDgs",
+    },
+  ]);
+  const [copied, setCopied] = useState(null);
+  const [form, setForm] = useState({ link: "", error: false });
+
+  function onCopy(obj) {
+    navigator.clipboard.writeText(obj.shortCode);
+    setCopied(obj.id);
+  }
+
+  function shorten() {
+    axios
+      .get(`https://api.shrtco.de/v2/shorten?url=${form.link}`)
+      .then((result) => {
+        result = result.data;
+        setLinks([
+          ...links,
+          {
+            id: links.length + 2,
+            link: form.link,
+            shortCode: result["result"]["full_short_link"],
+          },
+        ]);
+      })
+      .then(() => {
+        setForm({ ...form, error: false });
+      })
+      .catch(() => {
+        setForm({ ...form, error: true });
+      });
+  }
+
   return (
     <div>
       <Head>
@@ -39,32 +81,40 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="url-form-sect-cont">
-        <div className="url-form-sect-1">
-          <div className="url-form-sect row">
-            <div className="col-md-9 pt-2">
-              <input type="text" placeholder="Shorten a link here..." />
-            </div>
-            <div className="col-md-3 pt-2">
-              <button className="btn-shorten"> Shorten it! </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <div>
-            <div>https://www.frontendmentor.com</div>
-            <div>
-              <div>https://rel.ink/k334i4</div>
-              <div>Copy</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className={styles.sect__2}>
+        <div>
+          <div className="url-form-sect-cont">
+            <div className="url-form-sect-1">
+              <div className="url-form-sect row">
+                <div className="col-md-9 pt-2">
+                  <input
+                    value={form.link}
+                    onChange={(e) =>
+                      setForm({ link: e.target.value, error: form.error })
+                    }
+                    type="text"
+                    placeholder="Shorten a link here..."
+                  />
+                </div>
+                <div className="col-md-3 pt-2">
+                  <button onClick={shorten} className="btn-shorten">
+                    Shorten it!
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="links-sect mt-4">
+              {links.map((l) => (
+                <LinksList
+                  onCopy={onCopy}
+                  copied={copied == l.id}
+                  key={l.id}
+                  linkObj={l}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
         <div className={styles.adv__stats__cont}>
           <div style={{ textAlign: "center" }}>
             <div style={{ fontSize: "25px", fontWeight: "700" }}>
