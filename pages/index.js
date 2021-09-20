@@ -4,6 +4,7 @@ import { useState } from "react";
 import LinksList from "../components/LinksList";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
+import { AdvertSect } from "../components/AdvertSect";
 
 // https://api.shrtco.de/v2/shorten?url=https://www.frontendmentor.com
 
@@ -131,39 +132,33 @@ export default function Home() {
 
         <div className={styles.brand__recog__cont}>
           <div className="row">
-            <div className="col-lg-4 card-item-cont">
-              <div className="card-item">
-                <div className="card-item-title">Brand Recognition</div>
-                <div className="card-item-desc">
-                  Boost your brand recognition with <br /> each click. Generic
-                  links don’t mean a <br /> thing. Branded links help instil{" "}
-                  <br /> confidence in your content.
-                </div>
+            <AdvertSect icon="icon-brand-recognition.svg">
+              <div className="card-item-title">Brand Recognition</div>
+              <div className="card-item-desc">
+                Boost your brand recognition with <br /> each click. Generic
+                links don’t mean a <br /> thing. Branded links help instil
+                <br /> confidence in your content.
               </div>
-            </div>
-            <div className="col-lg-4 card-item-cont">
-              <div className="card-item">
-                <div className="card-item-title">Detailed Records</div>
-                <div className="card-item-desc">
-                  Gain insights into who is clicking your <br /> links. Knowing
-                  when and where
-                  <br />
-                  people engage with your content <br /> helps inform better
-                  decisions.
-                </div>
+            </AdvertSect>
+            <AdvertSect icon="icon-detailed-records.svg">
+              <div className="card-item-title">Detailed Records</div>
+              <div className="card-item-desc">
+                Gain insights into who is clicking your <br /> links. Knowing
+                when and where
+                <br />
+                people engage with your content <br /> helps inform better
+                decisions.
               </div>
-            </div>
-            <div className="col-lg-4 card-item-cont">
-              <div className="card-item">
-                <div className="card-item-title">Fully Customizable</div>
-                <div className="card-item-desc">
-                  Improve brand awareness and content <br /> discoverability
-                  through customizable <br />
-                  links, supercharging audience
-                  <br /> engagement.
-                </div>
+            </AdvertSect>
+            <AdvertSect icon="icon-fully-customizable.svg">
+              <div className="card-item-title">Fully Customizable</div>
+              <div className="card-item-desc">
+                Improve brand awareness and content <br /> discoverability
+                through customizable <br />
+                links, supercharging audience
+                <br /> engagement.
               </div>
-            </div>
+            </AdvertSect>
           </div>
         </div>
       </div>

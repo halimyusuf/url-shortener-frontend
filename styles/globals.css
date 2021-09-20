@@ -239,10 +239,10 @@ body {
   background-color: white;
   width: fit-content;
   /* align-self: center; */
-  padding: 25px;
+  padding: 0 25px 25px 25px;
   text-align: justify;
   border-radius: 4px;
-  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 .card-item-cont {
@@ -257,7 +257,7 @@ body {
 .card-item-title {
   font-weight: 700;
   font-size: 18px;
-  padding: 5px 0;
+  padding: 0px 0 5px 0;
 }
 
 .footer-col img {
@@ -273,6 +273,16 @@ body {
   width: 100%;
   border-radius: 4px;
   padding: 14px 12px;
+}
+
+.advert-icon {
+  position: relative;
+  border-radius: 50%;
+  padding: 15px;
+  width: fit-content;
+  top: -25px;
+  left: -15px;
+  background-color: var(--main-secondary-color);
 }
 /* 
 .sect__2 {
