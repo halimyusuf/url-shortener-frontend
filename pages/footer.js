@@ -70,7 +70,7 @@ export default function Footer() {
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Yusuf Halim</a>.
+        . Coded by <a href="https://github.com/halimyusuf">Halim Yusuf</a>.
       </div>
     </>
   );
