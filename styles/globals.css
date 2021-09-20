@@ -227,6 +227,14 @@ body {
   background-color: hsl(260, 8%, 14%);
 }
 
+.footer a:hover {
+  color: var(--main-primary-color);
+}
+
+.footer-icon a:hover {
+  color: var(--main-primary-color);
+}
+
 .card-item {
   background-color: white;
   width: fit-content;
