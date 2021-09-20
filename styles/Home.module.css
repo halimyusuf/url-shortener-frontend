@@ -114,8 +114,9 @@
 } */
 
 .sect__2 {
-  background-color: #f5f5f5;
-  padding: 15vh 0;
+  /* background-color: #f5f5f5; */
+  background-color: lavenderblush;
+  padding: 0 0 15vh 0;
 }
 
 .adv__stats__cont {
@@ -137,6 +138,9 @@
   font-weight: 600;
   font-size: 20px;
   margin: 0 20px 15px 0;
+}
+
+.links__sect {
 }
 
 @media (max-width: 600px) {
