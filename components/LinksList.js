@@ -3,10 +3,17 @@ export default function LinksList({ copied, onCopy, linkObj }) {
   return (
     <div className="link-list mt-3">
       <div className="d-md-flex justify-content-between align-items-center">
-        <div className="mx-3">{link}</div>
+        <div className="mx-3" style={{ overflowWrap: "break-word" }}>
+          {link}
+        </div>
         <div className="d-md-flex align-items-center">
           <div className="mx-3">
-            <a href={shortCode} target="_blank" rel="noreferrer">
+            <a
+              style={{ overflowWrap: "break-word" }}
+              href={shortCode}
+              target="_blank"
+              rel="noreferrer"
+            >
               {shortCode}
             </a>
           </div>
