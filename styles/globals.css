@@ -272,6 +272,10 @@ body {
   color: var(--main-primary-color);
 }
 
+.footer-icon a {
+  margin: 5px 4px;
+}
+
 .card-item {
   background-color: white;
   width: fit-content;
@@ -341,12 +345,13 @@ body {
 .brand__recog__cont {
   margin: 4vh 5vw 0 5vw;
 }
+*/
 
-.footer__shortly {
+.footer-shortly {
   font-weight: 600;
   font-size: 20px;
   margin: 0 20px 15px 0;
-} */
+}
 
 @media only screen and (max-width: 400px) {
   .url-form-sect-1 {

@@ -1,10 +1,11 @@
+import Image from "next/image";
 /* eslint-disable jsx-a11y/alt-text */
 export default function Footer() {
   return (
     <>
       <footer className="footer">
         <div className="d-flex justify-content-between">
-          <div className={`footer__shortly`}>Shortly</div>
+          <div className={`footer-shortly`}>Shortly</div>
 
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             <div className="footer-col">
@@ -49,16 +50,30 @@ export default function Footer() {
 
             <div className="footer-col footer-icon">
               <a href="#">
-                <img src="/images/icon-facebook.svg" />
+                <Image src="/images/icon-facebook.svg" width="23" height="23" />
+                {/* <img src="/images/icon-facebook.svg" /> */}
               </a>
               <a href="#">
-                <img src="/images/icon-twitter.svg" />
+                <Image src="/images/icon-twitter.svg" width="23" height="23" />
+                {/* <img src="/images/icon-twitter.svg" /> */}
               </a>
               <a href="#">
-                <img src="/images/icon-pinterest.svg" />
+                <Image
+                  src="/images/icon-pinterest.svg"
+                  width="23"
+                  height="23"
+                />
+
+                {/* <img src="/images/icon-pinterest.svg" /> */}
               </a>
               <a href="#">
-                <img src="/images/icon-instagram.svg" />
+                <Image
+                  src="/images/icon-instagram.svg"
+                  width="23"
+                  height="23"
+                />
+
+                {/* <img src="/images/icon-instagram.svg" /> */}
               </a>
             </div>
           </div>

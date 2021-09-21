@@ -78,7 +78,16 @@ export default function Home() {
         </div>
 
         <div className="col-md-6">
-          <img width="100%" src="/images/illustration-working.svg" />
+          <div style={{ width: "100%" }}>
+            <Image
+              src="/images/illustration-working.svg"
+              alt="illlustration"
+              width="1000"
+              height="1000"
+              // layout="responsive"
+            />
+          </div>
+          {/* <img width="100%" src="/images/illustration-working.svg" /> */}
         </div>
       </div>
 
