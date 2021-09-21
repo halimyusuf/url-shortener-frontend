@@ -40,9 +40,12 @@ export default function Navbar() {
 
         <div className="d-flex">
           <div>
-            <a href="#" className="nav-btn active">
+            <a href="#" className="nav-btn">
               Login
             </a>
+            {/* <a href="#" className="nav-btn active">
+              Login
+            </a> */}
           </div>
           <div>
             <a href="#" className="nav-btn">
