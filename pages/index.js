@@ -10,11 +10,11 @@ import { AdvertSect } from "../components/AdvertSect";
 
 export default function Home() {
   const [links, setLinks] = useState([
-    {
-      id: 1,
-      link: "https://www.frontendmentor.com",
-      shortCode: "https://shrtco.de/rcQDgs",
-    },
+    // {
+    //   id: 1,
+    //   link: "https://www.frontendmentor.com",
+    //   shortCode: "https://shrtco.de/rcQDgs",
+    // },
   ]);
   const [copied, setCopied] = useState(null);
   const [form, setForm] = useState({ link: "", error: false });
