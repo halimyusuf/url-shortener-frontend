@@ -2,9 +2,9 @@ export default function LinksList({ copied, onCopy, linkObj }) {
   const { link, shortCode } = linkObj;
   return (
     <div className="link-list mt-3">
-      <div className="d-flex justify-content-between align-items-center">
-        <div>{link}</div>
-        <div className="d-flex align-items-center">
+      <div className="d-md-flex justify-content-between align-items-center">
+        <div className="mx-3">{link}</div>
+        <div className="d-md-flex align-items-center">
           <div className="mx-3">
             <a href={shortCode} target="_blank" rel="noreferrer">
               {shortCode}
