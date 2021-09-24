@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="px-4 pt-2" id="nav-brand">
-        <a>Shorly</a>
+        <a>Shortly</a>
       </div>
       <div className={`nav-links ${open ? "" : "nav-close"}`}>
         <div onClick={onToggle} className="nav-toggle-btn">
