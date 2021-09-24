@@ -41,7 +41,7 @@ export default function Home() {
         ]);
       })
       .then(() => {
-        setForm({ ...form, error: false, loading: false });
+        setForm({ link: "", error: false, loading: false });
       })
       .catch(() => {
         setForm({ ...form, error: true, loading: false });
