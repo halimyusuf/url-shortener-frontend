@@ -17,7 +17,7 @@ export default function Home() {
     // },
   ]);
   const [copied, setCopied] = useState(null);
-  const [form, setForm] = useState({ link: "", error: false });
+  const [form, setForm] = useState({ link: "", error: false, loading: false });
 
   function onCopy(obj) {
     navigator.clipboard.writeText(obj.shortCode);
@@ -25,6 +25,8 @@ export default function Home() {
   }
 
   function shorten() {
+    if (form.loading) return;
+    setForm({ ...form, loading: true });
     axios
       .get(`https://api.shrtco.de/v2/shorten?url=${form.link}`)
       .then((result) => {
@@ -39,10 +41,10 @@ export default function Home() {
         ]);
       })
       .then(() => {
-        setForm({ ...form, error: false });
+        setForm({ ...form, error: false, loading: false });
       })
       .catch(() => {
-        setForm({ ...form, error: true });
+        setForm({ ...form, error: true, loading: false });
       });
   }
 
@@ -103,12 +105,13 @@ export default function Home() {
                       setForm({ link: e.target.value, error: form.error })
                     }
                     type="text"
+                    disabled={form.loading ? true : false}
                     placeholder="Shorten a link here..."
                   />
                 </div>
                 <div className="col-md-3 pt-2">
                   <button onClick={shorten} className="btn-shorten">
-                    Shorten it!
+                    {form.loading ? "Loading..." : "Shorten it!"}
                   </button>
                 </div>
               </div>
